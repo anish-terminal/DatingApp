@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using API.Data;
@@ -74,5 +75,6 @@ namespace API.Controllers
         {
             return await _context.Users.AnyAsync(x => x.UserName == username.ToLower());
         }
+
     }
 }
