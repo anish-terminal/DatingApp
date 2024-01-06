@@ -20,6 +20,8 @@ namespace API.Middleware
         {
             try
             {
+                // Endpoint endpoint = context.GetRouteValue;
+                Console.WriteLine("EndPoint => "+context.Request.Path);
                 await _next(context);
             }
             catch (Exception ex)
